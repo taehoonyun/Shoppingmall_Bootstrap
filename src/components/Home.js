@@ -5,7 +5,7 @@ import "./Home.css";
 
 import Col from "react-bootstrap/Col";
 
-function Home({ title, image, price, description, category }) {
+function Home({ title, image, price, description, category, min }) {
   return (
     <Col xs={6} md={4} className="item">
       <Card style={{ cursor: "pointer" }}>
@@ -20,7 +20,9 @@ function Home({ title, image, price, description, category }) {
           </Card.Text>
         </Card.Body>
         <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
+          <small className="text-muted">{`Last updated ${
+            min | 0
+          } mins ago`}</small>
         </Card.Footer>
       </Card>
     </Col>

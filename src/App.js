@@ -77,6 +77,7 @@ class App extends React.Component {
                       price={item.price}
                       description={item.description}
                       category={item.category}
+                      min={item.rating.rate}
                     />
                   );
                 })}
